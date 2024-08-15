@@ -31,7 +31,9 @@ const LyricsComponent = ({ songId }) => {
         const result = await response.json();
         console.log('Lyrics API Response:', result); // Log the response
 
-        const htmlContent = result.lyrics?.lyrics?.body || '<p>No lyrics found</p>';
+        const htmlContent = result.lyrics?.lyrics?.body
+        ? result.lyrics.lyrics.body.html
+        : '<p>No lyrics found</p>';
 
         setHtmlContent(htmlContent);
       } catch (error) {
@@ -43,8 +45,6 @@ const LyricsComponent = ({ songId }) => {
 
     fetchLyrics();
   }, [songId, url, apiKey]);
-
-  console.log(htmlContent);
 
   return (
     <div>
