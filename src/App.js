@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <SongSearch onSongId={setSongId} />
+      {songId && <DetailsComponent songId={songId} />}
       {songId && <LyricsComponent songId={songId} />}
       <Footer />
     </div>

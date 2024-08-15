@@ -49,7 +49,6 @@ const LyricsComponent = ({ songId }) => {
 
   return (
     <div>
-      <h2>Song Lyrics</h2>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       <div
