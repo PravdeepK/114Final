@@ -9,7 +9,7 @@ const DetailsComponent = () => {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': '0bc4e94883msh247ee989864616fp1fa657jsn5c235dc407de', // Replace with your actual API key
+      'x-rapidapi-key': '0bc4e94883msh247ee989864616fp1fa657jsn5c235dc407de',
       'x-rapidapi-host': 'genius-song-lyrics1.p.rapidapi.com'
     }
   };

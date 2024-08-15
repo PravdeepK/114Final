@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import './API.css';
 
 const LyricsComponent = ({ songId }) => {
   const [htmlContent, setHtmlContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const apiKey = '0bc4e94883msh247ee989864616fp1fa657jsn5c235dc407de'; // Replace with your actual API key
+  const apiKey = '0bc4e94883msh247ee989864616fp1fa657jsn5c235dc407de';
   const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${songId}`;
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const LyricsComponent = ({ songId }) => {
 
   return (
     <div>
-      <h1>Song Lyrics</h1>
+      <h2>Song Lyrics</h2>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       <div
