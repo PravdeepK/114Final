@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 export const SongSearch = ({ onSongId }) => {
   const [title, setTitle] = useState('');
-  const [songId, setSongId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -11,7 +10,6 @@ export const SongSearch = ({ onSongId }) => {
   const handleSearch = async () => {
     setLoading(true);
     setError(null);
-    setSongId(null);
     
     const url = `https://genius-song-lyrics1.p.rapidapi.com/search?q=${encodeURIComponent(title)}`;
     const options = {
@@ -30,6 +28,8 @@ export const SongSearch = ({ onSongId }) => {
       }
 
       const result = await response.json();
+      console.log('Search API Response:', result); // Log the response
+
       const song = result.hits[0]?.result;
       if (song) {
         onSongId(song.id); // Pass the song ID to App.js
@@ -58,10 +58,8 @@ export const SongSearch = ({ onSongId }) => {
         {loading ? 'Searching...' : 'Search'}
       </button>
       {error && <p>Error: {error}</p>}
-      {songId && <p>Song ID: {songId}</p>}
     </div>
   );
-
 };
 
 export default SongSearch;
