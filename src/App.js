@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import Header from './Header';
 import Footer from './Footer';
@@ -11,14 +11,15 @@ function App() {
   const [songId, setSongId] = useState(null);
 
   return (
-    <div className="App">
+    <div className="app-container">
       <Header />
-      <SongSearch onSongId={setSongId} />
-      {songId && <LyricsComponent songId={songId} />}
+      <div className="content-wrapper">
+        <SongSearch onSongId={setSongId} />
+        {songId && <LyricsComponent songId={songId} />}
+      </div>
       <Footer />
     </div>
   );
-  
 }
 
 export default App;

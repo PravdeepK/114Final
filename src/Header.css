@@ -1,12 +1,28 @@
-.App-header {
-    background-color: #31343a;
-    color: white;
-    padding: 0 2rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 7.5vh;
-    display: flex;
-    align-items: center;
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 20px 20px; /* Increase padding to make the header bigger */
+  box-shadow: 0 4px 2px -2px gray;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  left: 20px;
+}
+
+.logo {
+  height: 70px; /* Keep the logo size increased */
+  width: auto;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 2rem; /* Keep the font size increased */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
