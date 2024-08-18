@@ -7,33 +7,11 @@ html, body, #root {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the container takes full height of the viewport */
+  min-height: 100vh;
 }
 
 .content-wrapper {
-  flex-grow: 1; /* This makes the content area grow and push the footer down */
-  text-align: center;
+  flex-grow: 1;
   padding: 20px;
-}
-
-.App-logo {
-height: 40vmin;
-pointer-events: none;
-}
-
-footer {
-  background-color: #f8f9fa;
   text-align: center;
-  border-top: 1px solid #e0e0e0;
-  width: 100%;
-  margin-top: auto; /* Ensures it pushes the footer down */
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer p {
-  margin: 1vh 0;
 }

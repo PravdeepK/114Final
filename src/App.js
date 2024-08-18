@@ -12,9 +12,11 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <SongSearch onSongId={setSongId} />
-      {songId && <DetailsComponent songId={songId} />}
-      {songId && <LyricsComponent songId={songId} />}
+      <div className="content-wrapper">
+        <SongSearch onSongId={setSongId} />
+        {songId && <DetailsComponent songId={songId} />}
+        {songId && <LyricsComponent songId={songId} />}
+      </div>
       <Footer />
     </div>
   );
