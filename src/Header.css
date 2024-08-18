@@ -21,7 +21,6 @@
 }
 
 .header-title {
-  padding-right: 25px;
   flex-grow: 1;
   display: flex;
   justify-content: center;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './API.css';
+import './API.css'; // Ensure this file contains the new styles
 
 const LyricsComponent = ({ songId }) => {
   const [htmlContent, setHtmlContent] = useState('');
@@ -48,7 +48,7 @@ const LyricsComponent = ({ songId }) => {
   }, [songId, url, apiKey]);
 
   return (
-    <div>
+    <div className="lyrics-container">
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       <div

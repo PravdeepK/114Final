@@ -1,11 +1,23 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the header content */
   background-color: #f8f9fa;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  position: relative; /* Change to relative so it stays within the flow of the document */
+  padding: 20px 20px;
+  box-shadow: 0 4px 2px -2px gray;
+  margin: 0;
   width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom when content is short */
-  clear: both; /* Ensure it doesn't overlap with content */
+  position: relative;
 }
 
 .footer-content {
