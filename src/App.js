@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SearchBar from './SearchBar';
 import Header from './Header';
 import Footer from './Footer';
 import LyricsComponent from './APILyrics';
