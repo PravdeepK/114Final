@@ -1,12 +1,18 @@
 import React from 'react';
 import './Header.css';
+import logo from './img/logo.png'; // Import the logo
 
-function Header() {
+const Header = () => {
   return (
-    <header className="App-header">
-      <h1>Musica</h1>
+    <header className="header">
+      <div className="logo-container">
+        <img src={logo} alt="Musica Logo" className="logo" />
+      </div>
+      <div className="header-title">
+        <h1>Welcome to Musica</h1>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
