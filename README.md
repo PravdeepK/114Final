@@ -1,3 +1,7 @@
+# This project was made for my Advanced Front-End Class
+
+We were tasked to create a webpage using react so we decided to recreate the music website genius
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
